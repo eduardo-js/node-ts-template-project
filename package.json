@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cz": "cz"
+    "cz": "cz",
+    "prepare": "husky install",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +22,16 @@
     "eslint": ">=8.0.0",
     "eslint-config-xo": "^0.42.0",
     "eslint-config-xo-typescript": "^0.53.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "typescript": ">=4.4"
+  },
+  "dependencies": {
+    "prettier": "^2.7.1"
+  },
+  "lint-staged": {
+    "*.{ts}": "eslint --fix",
+    "*{md,json}": "prettier --write",
+    "*.js": "eslint --cache --fix"
   }
 }
