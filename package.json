@@ -7,7 +7,7 @@
     "dev": "dotenv -e .env.dev ts-node-dev --respawn src/main",
     "test": "dotenv -e .env.test jest --detectOpenHandles",
     "test:w": "dotenv -e .env.test jest --watch --detectOpenHandles",
-    "test:staged": "dotenv -e .env.test jest -o",
+    "test:staged": "dotenv -e .env.test jest --changedSince",
     "cz": "cz",
     "prepare": "husky install",
     "lint": "eslint src/**/*.ts",
