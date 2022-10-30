@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev --respawn src/main",
-    "test": "jest",
+    "dev": "dotenv -e .env.dev ts-node-dev --respawn src/main",
+    "test": "dotenv -e .env.test jest",
     "cz": "cz",
     "prepare": "husky install",
     "lint": "eslint src/**/*.ts",
@@ -45,5 +45,8 @@
     "*.ts": "eslint --fix",
     "*{md,json}": "prettier --write",
     "*.js": "eslint --cache --fix"
+  },
+  "dependencies": {
+    "dotenv-cli": "^6.0.0"
   }
 }
