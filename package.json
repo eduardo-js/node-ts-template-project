@@ -5,11 +5,14 @@
   "main": "index.js",
   "scripts": {
     "dev": "dotenv -e .env.dev ts-node-dev --respawn src/main",
-    "test": "dotenv -e .env.test jest",
+    "test": "dotenv -e .env.test jest --detectOpenHandles",
+    "test:w": "dotenv -e .env.test jest --watch --detectOpenHandles",
+    "test:staged": "dotenv -e .env.test jest -o",
     "cz": "cz",
     "prepare": "husky install",
     "lint": "eslint src/**/*.ts",
-    "lint:fix": "eslint src/**/*.ts --fix"
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "lint:staged": "lint-staged"
   },
   "keywords": [],
   "author": "",

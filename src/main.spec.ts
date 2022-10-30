@@ -4,7 +4,7 @@ describe('main', () => {
 	it('should be defined', async () => {
 		expect(main).toBeDefined();
 	});
-	it('should 3000', async () => {
+	it('should 123', async () => {
 		expect(process.env['PORT']).toEqual('123');
 	});
 });

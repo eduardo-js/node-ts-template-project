@@ -3,4 +3,4 @@ dist
 .env
 .env.dev
 .env.test
-.eslintcache
+./.eslintcache
