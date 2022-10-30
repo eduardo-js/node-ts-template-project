@@ -42,10 +42,7 @@
     "swc": true
   },
   "lint-staged": {
-    "*.{ts}": [
-      "eslint --fix",
-      "jest --changedSince"
-    ],
+    "*.ts": "eslint --fix",
     "*{md,json}": "prettier --write",
     "*.js": "eslint --cache --fix"
   }
