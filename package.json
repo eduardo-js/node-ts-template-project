@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "dotenv -e .env.dev ts-node-dev src/main --respawn",
+    "dev": "tsc --watch & dotenv -e .env.dev nodemon dist/main",
     "test": "dotenv -e .env.test jest --detectOpenHandles",
     "test:w": "dotenv -e .env.test jest --watch --detectOpenHandles",
-    "test:staged": "dotenv -e .env.test jest --changedSince",
     "cz": "cz",
     "prepare": "husky install",
     "lint": "eslint src/**/*.ts",
@@ -46,8 +45,7 @@
   },
   "lint-staged": {
     "*.ts": "eslint --fix",
-    "*{md,json}": "prettier --write",
-    "*.js": "eslint --cache --fix"
+    "*{md,json}": "prettier --write"
   },
   "dependencies": {
     "dotenv-cli": "^6.0.0"
