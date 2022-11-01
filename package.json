@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "dotenv -e .env.dev ts-node-dev --respawn src/main",
+    "dev": "dotenv -e .env.dev ts-node-dev src/main --respawn",
     "test": "dotenv -e .env.test jest --detectOpenHandles",
     "test:w": "dotenv -e .env.test jest --watch --detectOpenHandles",
     "test:staged": "dotenv -e .env.test jest --changedSince",
