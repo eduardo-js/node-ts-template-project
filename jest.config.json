@@ -3,5 +3,6 @@
   "testEnvironment": "node",
   "transform": {
     "^.+\\.spec.ts?$": "@swc/jest"
-  }
+  },
+  "testPathIgnorePatterns": ["dist"]
 }
