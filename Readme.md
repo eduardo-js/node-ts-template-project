@@ -1,6 +1,6 @@
 # Node Typescript Boilerplate
 
-## How setup
+## How to setup
 
 1.  ```sh
     npm i -g pnpm
