@@ -1,12 +1,13 @@
 services:
   app:
-    build: 
+    build:
       context: .
       dockerfile: Dockerfile.dev
-
     volumes:
       - .:/home/node/app
     container_name: app
+    ports:
+      - 5000:5000
   #   depends_on:
   #     - db
 
